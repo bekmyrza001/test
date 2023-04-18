@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			background: linear-gradient(to left,#94C6C6,#6CAF9C,#8BA2D0 );
+		}
+		.box{
+			display: flex;
+			flex-wrap: wrap;
+			width: 1300px;
+			height: 700px;
+			background: rgba(68, 199, 207 , 0.3);
+			margin: auto;
+			box-shadow: 0 0 10px black;
+			border-bottom-left-radius: 80px;
+			border-top-right-radius: 80px;
+			border-bottom-right-radius: 10px;
+			border-top-left-radius: 10px;
+		}
+		marquee{
+			font-size: 3em;
+			margin-bottom: -30px;
+			margin-top: -17px;
+		}
+		.im{
+			background-image: url(https://i.pinimg.com/564x/3f/65/79/3f657950e97a45f81508e6629dfab389.jpg);
+			background-repeat: no-repeat;
+			width: 500px;
+			height: 400px;
+			border-bottom-left-radius: 80px;
+			border-top-right-radius: 50px;
+			border-bottom-right-radius: 15px;
+			border-top-left-radius: 15px;
+			margin-top: 230px;
+			margin-left: -955px;
+			transition: 2s;
+		}
+		.im:hover{
+			box-shadow: 0 0 15px 10px #5D6D7E;
+			transform: scale(0.9);
+		}
+		.h1{
+			color: #566573;
+		}
+		.card {
+		 width: 13.5rem;
+		 height: 16rem;
+		 border-radius: 1rem;
+		 border: #212121 0.2rem solid;
+		 transition: all 0.4s ease-in;
+		 box-shadow: 0.4rem 0.4rem 0.6rem #00000040;
+		 position: relative;
+		 left: 59em;
+		 top: 4em;
+		 background-image: url(https://avatars.mds.yandex.net/i?id=63f4a329cc7826492528634592ed508914f6ee59-7570837-images-thumbs&n=13);
+		}
+
+		.card:hover {
+		 transform: translateY(-1.5rem);
+		 border: #f2295bf0 0.2em dashed;
+		 border-radius: 2.5rem 0 2.5rem 0;
+		}
+		.car {
+		 width: 13.5rem;
+		 height: 16rem;
+		 border-radius: 1rem;
+		 border: #212121 0.2rem solid;
+		 transition: all 0.4s ease-in;
+		 box-shadow: 0.4rem 0.4rem 0.6rem #00000040;
+		 position: relative;
+		 left: 27em;
+		 top: 4em;
+		 background-image: url(https://avatars.mds.yandex.net/i?id=c3f99f79a8f4ad916be0fe9d72904de5d42ab441-8219219-images-thumbs&n=13);
+		}
+
+		.car:hover {
+		 transform: translateY(-1.5rem);
+		 border: #82E0AA 0.2em dashed;
+		 border-radius: 2.5rem 0 2.5rem 0;
+		}
+		.ca {
+		 width: 13.5rem;
+		 height: 16rem;
+		 border-radius: 1rem;
+		 border: #212121 0.2rem solid;
+		 transition: all 0.4s ease-in;
+		 box-shadow: 0.4rem 0.4rem 0.6rem #00000040;
+		 position: relative;
+		 left: 28em;
+		 top: 22em;
+		 background-image: url(https://avatars.mds.yandex.net/i?id=3db1c44fb69c8e72c2280e68781be7a2e9d3cf54-6332308-images-thumbs&n=13);
+		}
+
+		.ca:hover {
+		 transform: translateY(-1.5rem);
+		 border: #F4D03F 0.2em dashed;
+		 border-radius: 2.5rem 0 2.5rem 0;
+		}
+		.c {
+		 width: 13.5rem;
+		 height: 16rem;
+		 border-radius: 1rem;
+		 border: #212121 0.2rem solid;
+		 transition: all 0.4s ease-in;
+		 box-shadow: 0.4rem 0.4rem 0.6rem #00000040;
+		 position: relative;
+		 left: -4em;
+		 top: 22em;
+		 background-image: url(https://avatars.mds.yandex.net/i?id=ef9c42f6b6c4068348e9ba1b25f4d85578e0f2d2-9065839-images-thumbs&n=13);
+		}
+
+		.c:hover {
+		 transform: translateY(-1.5rem);
+		 border: #C39BD3  0.2em dashed;
+		 border-radius: 2.5rem 0 2.5rem 0;
+		}
+		.container form {
+		  display: flex;
+		  flex-wrap: wrap;
+		  flex-direction: column;
+		  margin-top: 50px;
+		}
+
+		.container label {
+		  display: flex;
+		  cursor: pointer;
+		  font-weight: 500;
+		  position: relative;
+		  overflow: hidden;
+		  margin-bottom: 0.375em;
+		}
+
+		.container  label input {
+		  position: absolute;
+		  left: -9999px;
+		}
+
+		.container label input:checked + span {
+		  background-color: #414181;
+		  color: white;
+		}
+
+		.container label input:checked + span:before {
+		  box-shadow: inset 0 0 0 0.4375em #00005c;
+		}
+
+		.container label span {
+		  display: flex;
+		  align-items: center;
+		  padding: 0.375em 0.75em 0.375em 0.375em;
+		  border-radius: 99em;
+		  transition: 0.25s ease;
+		  color: #414181;
+		}
+
+		.container label span:hover {
+		  background-color: #d6d6e5;
+		}
+
+		.container label span:before {
+		  display: flex;
+		  flex-shrink: 0;
+		  content: "";
+		  background-color: #fff;
+		  width: 1.5em;
+		  height: 1.5em;
+		  border-radius: 50%;
+		  margin-right: 0.375em;
+		  transition: 0.25s ease;
+		  box-shadow: inset 0 0 0 0.125em #00005c;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<marquee><br>&#127828 Welcome our site <b>&#127829<b/></marquee>
+		<div class="container">
+	<form>
+		<label>
+			<input type="radio" name="radio" checked="">
+			<span>&#127830</span>
+		</label>
+		<label>
+			<input type="radio" name="radio">
+			<span>&#127836</span>
+		</label>
+		<label>
+			<input type="radio" name="radio">
+			<span>&#127843</span>
+		</label>
+	</form>
+</div>		
+		<div class="card"></div>
+		<div class="car"></div>
+		<div class="ca"></div>
+		<div class="c"></div>
+			<div class="im">
+				<h1 class="h1">There is no love more sincere than the love of food. &#127854</h1>
+			</div>	
+	</div>
+</body>
+</html>
